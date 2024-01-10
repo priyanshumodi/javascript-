@@ -41,3 +41,33 @@ myFunction();
 console.log(typeof myFunction); //object function
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+// ***************************************************
+
+// stack (primitive), Heap (Non-Primitive)
+
+let myYoutubename = "krishnaradhe.com"
+
+let anotherName = myYoutubename;
+anotherName = "chai aur code"
+
+console.log(myYoutubename);
+console.log(anotherName);
+
+let userOne = {
+    name:"krishna",
+    age:45
+}
+
+console.log(userOne);
+
+let userTwo = userOne
+
+userTwo.name="radha"
+
+console.log(userTwo);
+
+// hence stack work on pass by value and 
+// heap works on pass by reference
