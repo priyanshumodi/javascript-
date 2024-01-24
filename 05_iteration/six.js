@@ -9,6 +9,7 @@ const coding = ["java","c","cpp","python"]
 // console.log(value);
 
 // filter is used for return a data of for
+
 // const value = coding.filter( (item) => {
 //     console.log(item);
 //     return item;
