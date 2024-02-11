@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let startInterval;
+    document.querySelector('#start').addEventListener('click',function(e){
+        // if we start without checking that this is already running or not 
+        // then startInterval overwride and previous interval will not stop
+        if(!startInterval)
+        {
+            console.log("start");
+            const sayDate = function(str) {
+            console.log("Krishna", Date.now(),"radhe")
+            }
+            startInterval = setInterval(sayDate,1000,"hy")
+        }
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(e){
+        console.log("stop");
+        clearInterval(startInterval);
+        // this is because of safety check on start button
+        startInterval = null;
+    })
+    
+</script>
+</html>
